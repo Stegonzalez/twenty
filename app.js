@@ -26,60 +26,66 @@ do{
 
 alert(`The compuer will stop at ${totalComp}.`)
 
-alert("Now it's the user's turn.")
+if(totalComp > 21){
 
-do{
-    ran = Math.floor(Math.random() * 10) + 1
-
-    for(var i = 1; i <= ran; i++){
-        user.push(ran);
-    }
-
-    var totalUser = user.length
-
-    alert(`Your new number is ${ran}.    Your current total is ${totalUser}.`)
-
-    if( totalUser > 19 ){
-
-        break;
-
-    }else{
-
-        var x = prompt("Would you like another number? If you would like to stop, press 'n' to stop.")
-
-    }
-    
-}while(x != "n")
-
-alert(`You stoped at ${totalUser}`);
-
-
-
-if (totalUser > 21){
-
-    alert(`You got ${totalUser}. Because you went over 20, the computer wins with ${totalComp}`)
-    compScore.push("w");
-
-}else if(totalComp > 21){
-
-    alert(`The computer got ${totalComp}. Because the computer is over 20, you win with ${totalUser}.`)
+    alert(`The computer got ${totalComp}. Because the computer is over 20, you get the point!`)
     userScore.push("w");
     
-}else if(totalUser > totalComp){
+}else if(totalComp < 21){
 
-    alert(`You win! You got ${totalUser}, and the computer got ${totalComp}.`)
-    userScore.push("w")
+    alert("Now it's the user's turn.")
 
-}else if(totalUser < totalComp){
-
-    alert(`You Lost, You got ${totalUser}, and the computer got ${totalComp}.`)
-    compScore.push("w");
-
-}else if(totalUser == totalComp){
-
-    alert(`It's a tie! You both got ${totalUser}. No one gets a point.`);
-
+    do{
+        ran = Math.floor(Math.random() * 10) + 1
+    
+        for(var i = 1; i <= ran; i++){
+            user.push(ran);
+        }
+    
+        var totalUser = user.length
+    
+        alert(`Your new number is ${ran}.    Your current total is ${totalUser}.`)
+    
+        if( totalUser > 19 ){
+    
+            break;
+    
+        }else{
+    
+            var x = prompt("Would you like another number? If you would like to stop, press 'n' to stop.")
+    
+        }
+        
+    }while(x != "n")
+    
+    alert(`You stoped at ${totalUser}`);
+    
+    
+    
+    if (totalUser > 21){
+    
+        alert(`You got ${totalUser}. Because you went over 20, the computer wins with ${totalComp}`)
+        compScore.push("w");
+    
+    }else if(totalUser > totalComp){
+    
+        alert(`You win! You got ${totalUser}, and the computer got ${totalComp}.`)
+        userScore.push("w")
+    
+    }else if(totalUser < totalComp){
+    
+        alert(`You Lost, You got ${totalUser}, and the computer got ${totalComp}.`)
+        compScore.push("w");
+    
+    }else if(totalUser == totalComp){
+    
+        alert(`It's a tie! You both got ${totalUser}. No one gets a point.`);
+    
+    }
 }
+
+
+
 alert(`The current score is User: ${userScore.length}, Computer: ${compScore.length}.`)
 
 var playAgain = prompt("Would you like to play again? Press 'y' to play again. Any other key will exit the program.")
