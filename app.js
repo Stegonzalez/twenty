@@ -6,89 +6,91 @@ var compScore = [];
 
 do{
 
-var comp = [];
-var user = [];
+    var comp = [];
+    var user = [];
 
-alert("Now... it's the computer's turn.")
-
-do{
-    var ran = Math.floor(Math.random() * 10) + 1
-
-    for(var i = 1; i <= ran; i++){
-        comp.push(ran);
-    }
-    
-    var totalComp = comp.length
-
-    alert(`The new number is ${ran}.    The computer total is ${totalComp}.`)
-
-}while(totalComp < 16);
-
-alert(`The compuer will stop at ${totalComp}.`)
-
-if(totalComp > 21){
-
-    alert(`The computer got ${totalComp}. Because the computer is over 20, you get the point!`)
-    userScore.push("w");
-    
-}else if(totalComp < 21){
-
-    alert("Now it's the user's turn.")
+    alert("Now... it's the computer's turn.")
 
     do{
-        ran = Math.floor(Math.random() * 10) + 1
-    
+        var ran = Math.floor(Math.random() * 10) + 1
+
         for(var i = 1; i <= ran; i++){
-            user.push(ran);
-        }
-    
-        var totalUser = user.length
-    
-        alert(`Your new number is ${ran}.    Your current total is ${totalUser}.`)
-    
-        if( totalUser > 19 ){
-    
-            break;
-    
-        }else{
-    
-            var x = prompt("Would you like another number? If you would like to stop, press 'n' to stop.")
-    
+            comp.push(ran);
         }
         
-    }while(x != "n")
-    
-    alert(`You stoped at ${totalUser}`);
-    
-    
-    
-    if (totalUser > 21){
-    
-        alert(`You got ${totalUser}. Because you went over 20, the computer wins with ${totalComp}`)
-        compScore.push("w");
-    
-    }else if(totalUser > totalComp){
-    
-        alert(`You win! You got ${totalUser}, and the computer got ${totalComp}.`)
-        userScore.push("w")
-    
-    }else if(totalUser < totalComp){
-    
-        alert(`You Lost, You got ${totalUser}, and the computer got ${totalComp}.`)
-        compScore.push("w");
-    
-    }else if(totalUser == totalComp){
-    
-        alert(`It's a tie! You both got ${totalUser}. No one gets a point.`);
-    
+        var totalComp = comp.length
+
+        alert(`The new number is ${ran}.    The computer total is ${totalComp}.`)
+
+    }while(totalComp < 16);
+
+
+    alert(`The compuer will stop at ${totalComp}.`)
+
+
+    if(totalComp > 21){
+
+        alert(`The computer got ${totalComp}. Because the computer is over 20, you get the point!`)
+        userScore.push("w");
+        
+    }else if(totalComp < 21){
+
+
+        alert("Now it's the user's turn.")
+
+
+        do{
+            ran = Math.floor(Math.random() * 10) + 1
+        
+            for(var i = 1; i <= ran; i++){
+                user.push(ran);
+            }
+        
+            var totalUser = user.length
+        
+            alert(`Your new number is ${ran}.    Your current total is ${totalUser}.`)
+        
+            if( totalUser > 19 ){
+        
+                break;
+        
+            }else{
+        
+                var x = prompt("Would you like another number? If you would like to stop, press 'n' to stop.")
+        
+            }
+            
+        }while(x != "n")
+        
+        alert(`You stoped at ${totalUser}`);
+        
+        if (totalUser > 21){
+        
+            alert(`You got ${totalUser}. Because you went over 20, the computer wins with ${totalComp}`)
+            compScore.push("w");
+        
+        }else if(totalUser > totalComp){
+        
+            alert(`You win! You got ${totalUser}, and the computer got ${totalComp}.`)
+            userScore.push("w")
+        
+        }else if(totalUser < totalComp){
+        
+            alert(`You Lost, You got ${totalUser}, and the computer got ${totalComp}.`)
+            compScore.push("w");
+        
+        }else if(totalUser == totalComp){
+        
+            alert(`It's a tie! You both got ${totalUser}. No one gets a point.`);
+        
+        }
     }
-}
 
 
 
-alert(`The current score is User: ${userScore.length}, Computer: ${compScore.length}.`)
+    alert(`The current score is User: ${userScore.length}, Computer: ${compScore.length}.`)
 
-var playAgain = prompt("Would you like to play again? Press 'y' to play again. Any other key will exit the program.")
+    var playAgain = prompt("Would you like to play again? Press 'y' to play again. Any other key will exit the program.")
 
 }while(playAgain == "y");
 
