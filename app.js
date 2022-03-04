@@ -1,4 +1,4 @@
-alert("Welcome to 20! This is a competition to see which player gets closer to th enumber 20. you are going to play agenst the computer. You will draw nimbers from 1 to 10. The computer will stop at 16. Pay attention to the screen to see what your total is, and if you need another number press'y'.");
+alert("Welcome to 20! This is a competition to see which player gets closer to the number 20. you are going to play against the computer. You will draw numbers from 1 to 10. The computer will stop at 16. Pay attention to the screen to see what your total is, and if you need another number press 'y'.");
 
 
 var userScore = [];
@@ -25,7 +25,7 @@ do{
     }while(totalComp < 16);
 
 
-    alert(`The compuer will stop at ${totalComp}.`)
+    alert(`The computer will stop at ${totalComp}.`)
 
 
     if(totalComp > 21){
@@ -62,7 +62,7 @@ do{
             
         }while(x != "n")
         
-        alert(`You stoped at ${totalUser}`);
+        alert(`You stopped at ${totalUser}`);
         
         if (totalUser > 21){
         
