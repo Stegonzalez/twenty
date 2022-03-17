@@ -62,7 +62,7 @@ do{
             
         }while(x != "n")
         
-        alert(`You stopped at ${totalUser}`);
+        alert(`You stoped at ${totalUser}`);
         
         if (totalUser > 21){
         
@@ -107,3 +107,4 @@ if(userScore.length == compScore.length){
     alert(`Thank you for playing. The final score is User: ${userScore.length}, Computer: ${compScore.length}. You lost!`)
 
 }
+// This is a comment
